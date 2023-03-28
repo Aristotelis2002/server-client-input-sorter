@@ -5,7 +5,7 @@ import java.util.concurrent.RecursiveAction;
 
 public class MultithreadedQuickSort {
 
-    private static final int SEQUENTIAL_THRESHOLD = 1000;
+    private static final int SEQUENTIAL_THRESHOLD = 10_000;
 
     public static void sort(int[] arr, int numThreads) {
         // Create a ForkJoinPool with the specified number of threads.

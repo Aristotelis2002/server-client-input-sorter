@@ -9,7 +9,6 @@ public class MultithreadedMergeSort extends RecursiveAction {
 
     private final int start;
     private final int end;
-    private static int flag = 0; // debugging
 
     public MultithreadedMergeSort(int[] array, int start, int end) {
         this.array = array;
@@ -21,12 +20,8 @@ public class MultithreadedMergeSort extends RecursiveAction {
     protected void compute() {
         if (end - start < SEQUENTIAL_THRESHOLD) {
             MergeSort.sort(array, start, end);
-            // MergeSort.sort(array, 0, array.length - 1);
             return;
         }
-        // if (end - start) {
-        // return;
-        // }
 
         int mid = (start + end) / 2;
 
@@ -64,21 +59,6 @@ public class MultithreadedMergeSort extends RecursiveAction {
 
         // Copy the merged subarray back to the original array
         System.arraycopy(temp, 0, array, start, end - start);
-        // for (int index = start, tempindex = 0; tempindex < temp.length; tempindex++) {
-        //     array[index] = temp[tempindex];
-        //     index++;
-        // }
-        // if (flag == 0) {
-        //     flag++;
-        //     System.out.println("____________________");
-        //     for (int k2 = start; k2 < end - start; k2++) {
-        //         System.out.print(String.valueOf(array[k2]) + " ");
-        //     }
-        //     System.out.println("____________________");
-        //     for (int k2 = start; k2 < end - start; k2++) {
-        //         System.out.print(String.valueOf(temp[k2]) + " ");
-        //     }
-        // }
     }
 
     public static void sort(int[] array) {
