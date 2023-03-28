@@ -1,6 +1,11 @@
 # Server-client project that sorts array inputs
-## How to run it
- 
+## How to run it with Maven
+First clone the repo.    
+Open with a terminal the folder "server-client-input-sorter" that you just cloned.   
+To start the server, run the command   
+``` mvn exec:java -Dexec.mainClass="server.Server" ```  
+To start the client, simply run  
+``` mvn exec:java ```
 
 ## Documentation
 ### Introduction
