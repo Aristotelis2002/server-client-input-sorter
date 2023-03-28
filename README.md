@@ -1,4 +1,8 @@
 # Server-client project that sorts array inputs
+## How to run it
+ 
+
+## Documentation
 ### Introduction
 The project's idea is to function as a multi-threaded server that can serve multiple clients simultaneously. Clients can send requests to the server, which are processed and the result of the input gets sent back to the client. Queries consist of the type of sorting algorithm, the number of threads (if the algorithm is multithreaded), and the array which the client wants sorted.  
 ### Basic concepts and algorithms
